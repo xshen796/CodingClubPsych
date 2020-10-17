@@ -1,0 +1,10 @@
+https://docs.github.com/en/enterprise/2.18/user/github/managing-files-in-a-repository/adding-a-file-to-a-repository-using-the-command-line
+#https://gist.github.com/deitrick/2942432
+
+git clone https://github.com/xshen796/Regional_Vulnerability_Index.git
+
+cp ../example.RVI_create_stradl_MD.md ./
+git add *.md
+
+git commit -m "add a random file"
+git push origin master

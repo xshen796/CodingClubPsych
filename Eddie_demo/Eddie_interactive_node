@@ -1,0 +1,31 @@
+# log on an interactive node      -------------------------------
+qlogin -l h_vmem=4G
+
+# Go to a working directory      --------------------------------
+cd /exports/igmm/eddie/GenScotDepression/shen
+# Main working directories:
+# Group space: /exports/igmm/eddie/GenScotDepression/<userfolder>
+# Home space: /home/<UII>
+# Personal scratch space: /exports/eddie/scratch/<UII>
+
+# load modules      ---------------------------------------------
+# e.g. load R
+
+module add R
+module load R
+# check which versions are available
+module available R
+module load igmm/apps/R/3.5.1
+
+# Run loaded module(s)      --------------------------------------
+# Open an app
+R
+# Install/load a library
+install.packages(dplyr)  # specify lab directory to writable paths (listed in the 'Go to a working directory' section)
+library(dplyr)  
+# Close it up
+>> quit()
+
+# Exit node      -------------------------------------------------
+exit # exit interactive node
+exit # type 'exit' again to exit Eddie

@@ -1,0 +1,13 @@
+#!/bin/sh
+#$ -N eddie_demo
+#$ -cwd
+#$ -m beas
+#$ -M s1517658@ed.ac.uk
+#$ -l h_vmem=32G
+#$ -l h_rt=24:00:00
+. /etc/profile.d/modules.sh
+source ~/.bash_profile
+
+module unload R
+
+echo 'You are a genius' >> test.txt
