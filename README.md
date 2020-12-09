@@ -7,4 +7,4 @@
 
 
 ### SBayesR protocol (folder: SBayesR)
- - SBayesR_XS.md
+ - [Description](https://github.com/xshen796/CodingClubPsych/blob/master/SBayesR/SBayesR_XS.md)
