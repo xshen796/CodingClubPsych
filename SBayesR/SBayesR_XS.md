@@ -60,12 +60,19 @@ X Shen
     # Clean up partitioned files
     rm ukb_50k_bigset_2.8M.zip.part*
     ```
+    The file which contains the list of LD matrices `ukb_50k_begset_2.8M/ukb50k_2.8M_shrunk_sparse.mldmlist` is incorrect and contains wrongly named files. Run the following to create a new list which will be used in SBayesR (these must be in order of chromosomes 1 to 22):
+    ```
+    for i in {1..22}
+    do
+    echo ukb_50k_bigset_2.8M/ukb50k_shrunk_chr${i}_mafpt01.ldm.sparse >> ukb_50k_bigset_2.8M/ukb50k_2.8M_shrunk_sparse.new.mldmlist
+    done
+    ```
 
-  - Find the input file with a list of LD matrices downloaded can be
+  - Find the input file with a list of LD matrices downloaded can now be
     found in :
     
     > Prepared input 2:
-    > ukb\_50k\_begset\_2.8M/ukb50k\_2.8M\_shrunk\_sparse.mldmlist
+    > ukb\_50k\_begset\_2.8M/ukb50k\_2.8M\_shrunk\_sparse.new.mldmlist
 
 -----
 
@@ -92,7 +99,7 @@ X Shen
     ``` bash
     
     .gctb_2.02_Linux/gctb --sbayes R \
-         --mldm ukb_50k_begset_2.8M/ukb50k_2.8M_shrunk_sparse.mldmlist \
+         --mldm ukb_50k_begset_2.8M/ukb50k_2.8M_shrunk_sparse.new.mldmlist \
          --pi 0.95,0.02,0.02,0.01 \
          --gamma 0.0,0.01,0.1,1 \
          --ambiguous-snp \
