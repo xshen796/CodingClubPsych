@@ -72,7 +72,7 @@ X Shen
     found in :
     
     > Prepared input 2:
-    > ukb\_50k\_begset\_2.8M/ukb50k\_2.8M\_shrunk\_sparse.new.mldmlist
+    > ukb\_50k\_bigset\_2.8M/ukb50k\_2.8M\_shrunk\_sparse.new.mldmlist
 
 -----
 
@@ -99,7 +99,7 @@ X Shen
     ``` bash
     
     .gctb_2.02_Linux/gctb --sbayes R \
-         --mldm ukb_50k_begset_2.8M/ukb50k_2.8M_shrunk_sparse.new.mldmlist \
+         --mldm ukb_50k_bigset_2.8M/ukb50k_2.8M_shrunk_sparse.new.mldmlist \
          --pi 0.95,0.02,0.02,0.01 \
          --gamma 0.0,0.01,0.1,1 \
          --ambiguous-snp \
