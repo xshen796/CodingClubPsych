@@ -22,6 +22,11 @@ X Shen
     ls
     ```
 
+  - Set gctb to be executable (can check file rights using `ls -lt`). This only needs done once. 
+  
+`chmod +x gctb_2.02_Linux/gctb`
+
+
   - Go back to the project home folder
     
     ``` bash
@@ -68,8 +73,12 @@ X Shen
     done
     ```
 
-  - Find the input file with a list of LD matrices downloaded can now be
-    found in :
+  - The folder containing the files resulting from the above steps (ukb_50k_bigset_2.8M, 255 GB) can be found in:
+     /exports/igmm/datastore/GenScotDepression/data/resources/SBayesR_matrices
+     
+     or
+     
+     cp -r /exports/eddie/scratch/kmarwick/ukb_50k_bigset_2.8M /exports/igmm/eddie/GenScotDepression/data/resources/SBayesR_matrices
     
     > Prepared input 2:
     > ukb\_50k\_bigset\_2.8M/ukb50k\_2.8M\_shrunk\_sparse.new.mldmlist
@@ -112,5 +121,11 @@ X Shen
          --out-freq 10 \
          --out summstats.SBayesR
     ```
+  - Using 256GB of RAM is sufficient. For example, your jobfile might contain
+    ```
+    #$ -pe sharedmem 4
+    #$ -l h_vmem=64G
+    ```
+    
     
     > Output summary stats for calculating PRS: summstats.SBayesR.snpRes
