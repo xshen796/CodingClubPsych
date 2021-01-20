@@ -93,6 +93,8 @@ X Shen
     [tutotial](https://cnsgenomics.com/software/gctb/#Tutorial) and
     [options](https://cnsgenomics.com/software/gctb/#Options) for
     detailed descriptions for parametres.
+    
+  - Highly recommend using >256G memory, either by requesting one 256G node or multiple nodes with smaller memory.
 
   - Below is an example script using the prepared inputs 1-3 above:
     
