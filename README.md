@@ -9,4 +9,5 @@
 ### SBayesR protocol (folder: SBayesR)
  - [Description](https://github.com/xshen796/CodingClubPsych/blob/master/SBayesR/SBayesR_XS.md)
 
-### Use Rmarkdown to write supplementary materials (folder: rmarkdown_to_doc)
+### Use Rmarkdown to write supplementary materials (folder: rmkd_word)
+ - [Description](https://github.com/xshen796/CodingClubPsych/blob/master/rmkd_word/example.docx).
