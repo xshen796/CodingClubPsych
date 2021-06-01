@@ -21,7 +21,7 @@ library(flextable)
 
 ## Introduction
 
-### Reasons to drop word for your supplementary materials
+### Reasons to quit using word for your supplementary materials
 
 -   It is often full of tables and figures.
 
