@@ -1,0 +1,68 @@
+---
+title: "Supplementary Information"
+subtitle: "Coding club UoE Psychiatry"
+author: "Shen X. et al."
+
+output: 
+  word_document:
+   reference_docx: ref_style.docx
+#bibliography: bibliography.bib
+#csl: nature.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+#    reference_docx: ref_style.docx
+library(knitr)
+library(flextable)
+```
+
+\newpage
+
+## Introduction
+
+### Reasons to quit using word for your supplementary materials
+
+-   It is often full of tables and figures.
+
+-   You probably can't avoid redoing analysis.
+
+-   Really easy to track down if you've put the right versions of figures/tables in.
+
+-   It is cool. It makes me feel as if I'm a hacker.
+
+### Let me guess your worries
+
+-   Will it take too long?
+
+-   Is it too hard to learn?
+
+### Important things that are not covered in this documention
+
+-   Be familiar with rmarkdown.
+
+-   Organise analyses and results from the very beginning. Make it structured and easy to extend.
+
+   
+
+## Preparation
+
+### Files
+
+-   Reference for word style: .docx
+
+-   Citation: .bib and .csl
+
+-   Others: results, figures, etc.
+
+### Main steps
+
+-   Create a basic word doc style
+
+-   Write the text and add citations
+
+-   Add tables and fingures
+
+\newpage
+
+##### 

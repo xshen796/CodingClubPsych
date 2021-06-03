@@ -1,0 +1,26 @@
+---
+title: "Supplementary Information"
+subtitle: "Example Step 1: no style"
+author: "Shen X. et al."
+
+output: 
+  word_document:
+    reference_docx: ref_style.docx
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+#    reference_docx: ref_style.docx
+library(knitr)
+library(flextable)
+```
+
+\newpage
+
+## PhD is gold (whether you agree or not)
+
+### Dogs are better 
+
+-   Cute
+
+-   Cute
