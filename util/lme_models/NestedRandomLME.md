@@ -1,7 +1,4 @@
-# Niamh’s project: model with nested random effects
-
-Date Created: April 8, 2022 9:32 AM
-Status: Doing
+# Models with nested, random effects
 
 ## Background
 
@@ -15,7 +12,7 @@ Status: Doing
 ## Summary & caution
 
 - It is tricky to get p-values for a model with multiple, nested random effects. The p-values may vary, depending on how degree of freedom (DF) is defined. There are various of ways of approaching this issue, but the uncertainty of df should have little impact if the N is massive.
-- The package *lmerTestR* is one of the solutions. See its reference paper for more stats and descriptions. It is selected because of its simplicity: 1) built on an established R package ‘lme4’, 2) doesn’t require additional packages and 3) gives simple outputs that are similar to fixed effect glm models.
+- The package *lmerTestR* is one of the solutions. See its reference paper for more stats and descriptions. It is selected because of its simplicity: 1) built on an established R package â€˜lme4â€™, 2) doesnâ€™t require additional packages and 3) gives simple outputs that are similar to fixed effect glm models.
 - Note that running models with multiple, nested random factors can easily have model convergence issues.
 
 ## Example scripts
@@ -59,9 +56,7 @@ Status: Doing
 
 ## Updated function (beta)
 
-- Function can be found here:
-    
-    [reg_phewasStyle_NestedRandom.R](Niamh%E2%80%99s%20pr%2076a2b/reg_phewasStyle_NestedRandom.r)
+- Function can be found [here](https://github.com/xshen796/CodingClubPsych/blob/master/util/lme_models/NestedRandomLME.md). Note that variable names for family ID, scanner ID, etc have to be precisely the same as the example script.
     
 
 - Or you can create a plain text file and paste the content below:
