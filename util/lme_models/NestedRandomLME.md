@@ -2,12 +2,9 @@
 
 ## Background
 
-- GLMM model recommended by ABCD: [http://bbolker.github.io/mixedmodels-misc/glmmFAQ.html](http://bbolker.github.io/mixedmodels-misc/glmmFAQ.html)
-- Get p values from nested random effect models:
-
-[https://github.com/runehaubo/lmerTestR](https://github.com/runehaubo/lmerTestR)
-
-- Protocol paper for ABCD analysis: [https://www.biorxiv.org/content/10.1101/2020.02.10.942011v1.full](https://www.biorxiv.org/content/10.1101/2020.02.10.942011v1.full)
+- GLMM model recommended by ABCD: [link](http://bbolker.github.io/mixedmodels-misc/glmmFAQ.html)
+- Get p values from nested random effect models:[link](https://github.com/runehaubo/lmerTestR)
+- Protocol paper for ABCD analysis: [link](https://www.biorxiv.org/content/10.1101/2020.02.10.942011v1.full)
 
 ## Summary & caution
 
