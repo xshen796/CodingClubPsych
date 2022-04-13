@@ -9,7 +9,7 @@
 ## Summary & caution
 
 - It is tricky to get p-values for a model with multiple, nested random effects. The p-values may vary, depending on how degree of freedom (DF) is defined. There are various of ways of approaching this issue, but the uncertainty of df should have little impact if the N is massive.
-- The package *lmerTestR* is one of the solutions. See its reference paper for more stats and descriptions. It is selected because of its simplicity: 1) built on an established R package â€˜lme4â€™, 2) doesnâ€™t require additional packages and 3) gives simple outputs that are similar to fixed effect glm models.
+- The package *lmerTestR* is one of the solutions. See its reference paper for more stats and descriptions. It is selected because of its simplicity: 1) built on an established R package 'lmer', 2) does not require additional packages and 3) gives simple outputs that are similar to fixed effect glm models.
 - Note that running models with multiple, nested random factors can easily have model convergence issues.
 
 ## Example scripts
