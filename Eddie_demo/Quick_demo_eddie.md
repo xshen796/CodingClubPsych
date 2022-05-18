@@ -40,14 +40,15 @@ qlogin -l h_vmem=8G
 You can specify how much memory is needed by specifying the ‘h\_vmem’
 option. The larger the dataset you work with and the more complex your
 analysis is, the larger momery is needed. It is difficult to know
-precisely how much memory is needed even if you are very familiar with
-Eddie. It requires a bit of trail and error.
+precisely how much memory is needed before running a script, even if you
+are very familiar with Eddie. It requires a bit of trail and error.
 
   - Submit a code job to Eddie
 
 Find an example script
 [here](https://github.com/xshen796/CodingClubPsych/blob/master/Eddie_demo/Eddie_job)
-or copy and paste scripts below in an empty plain text file you created:
+or copy and paste the script below in an empty plain text file you
+created:
 
 ``` bash
 #!/bin/sh
@@ -86,7 +87,7 @@ The total memory required in the example script is 32G (per node) \* 2
 By default, files you created will be accessible only to you. Before
 sharing it with others, you will need to specify the rights of the files
 to make it read-able to others. To do this (for an example file
-test\_file.txt), use an example script as below:
+test\_file.txt), use the example script as below:
 
 ``` bash
 # Add read permission

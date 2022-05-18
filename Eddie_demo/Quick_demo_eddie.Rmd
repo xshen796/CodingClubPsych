@@ -39,11 +39,11 @@ knitr::include_graphics(here::here("Eddie_demo/screenshots/eddie_demo/Slide2.PNG
 qlogin -l h_vmem=8G
 ```
 
-You can specify how much memory is needed by specifying the 'h_vmem' option. The larger the dataset you work with and the more complex your analysis is, the larger momery is needed. It is difficult to know precisely how much memory is needed even if you are very familiar with Eddie. It requires a bit of trail and error.
+You can specify how much memory is needed by specifying the 'h_vmem' option. The larger the dataset you work with and the more complex your analysis is, the larger momery is needed. It is difficult to know precisely how much memory is needed before running a script, even if you are very familiar with Eddie. It requires a bit of trail and error.
 
 -  Submit a code job to Eddie
 
-Find an example script [here](https://github.com/xshen796/CodingClubPsych/blob/master/Eddie_demo/Eddie_job) or copy and paste scripts below in an empty plain text file you created:
+Find an example script [here](https://github.com/xshen796/CodingClubPsych/blob/master/Eddie_demo/Eddie_job) or copy and paste the script below in an empty plain text file you created:
 
 ```{bash,eval=F}
 #!/bin/sh
@@ -74,7 +74,7 @@ The total memory required in the example script is 32G (per node) * 2 (number of
 
 ## Share your files with others
 
-By default, files you created will be accessible only to you. Before sharing it with others, you will need to specify the rights of the files to make it read-able to others. To do this (for an example file test_file.txt), use an example script as below:
+By default, files you created will be accessible only to you. Before sharing it with others, you will need to specify the rights of the files to make it read-able to others. To do this (for an example file test_file.txt), use the example script as below:
 
 ```{bash,eval=F}
 # Add read permission

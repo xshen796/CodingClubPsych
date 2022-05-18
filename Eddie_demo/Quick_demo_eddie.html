@@ -624,11 +624,11 @@ body {
 <!-- end list -->
 
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="ex">qlogin</span> -l h_vmem=8G</a></code></pre></div>
-<p>You can specify how much memory is needed by specifying the ‘h_vmem’ option. The larger the dataset you work with and the more complex your analysis is, the larger momery is needed. It is difficult to know precisely how much memory is needed even if you are very familiar with Eddie. It requires a bit of trail and error.</p>
+<p>You can specify how much memory is needed by specifying the ‘h_vmem’ option. The larger the dataset you work with and the more complex your analysis is, the larger momery is needed. It is difficult to know precisely how much memory is needed before running a script, even if you are very familiar with Eddie. It requires a bit of trail and error.</p>
 <ul>
 <li>Submit a code job to Eddie</li>
 </ul>
-<p>Find an example script <a href="https://github.com/xshen796/CodingClubPsych/blob/master/Eddie_demo/Eddie_job">here</a> or copy and paste scripts below in an empty plain text file you created:</p>
+<p>Find an example script <a href="https://github.com/xshen796/CodingClubPsych/blob/master/Eddie_demo/Eddie_job">here</a> or copy and paste the script below in an empty plain text file you created:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="co">#!/bin/sh</span></a>
 <a class="sourceLine" id="cb3-2" data-line-number="2"><span class="co">#$ -N eddie_demo</span></a>
 <a class="sourceLine" id="cb3-3" data-line-number="3"><span class="co">#$ -cwd</span></a>
@@ -652,7 +652,7 @@ body {
 <li>Personal scratch space: /exports/eddie/scratch/<UII></li>
 </ul>
 <h2 id="share-your-files-with-others">Share your files with others</h2>
-<p>By default, files you created will be accessible only to you. Before sharing it with others, you will need to specify the rights of the files to make it read-able to others. To do this (for an example file test_file.txt), use an example script as below:</p>
+<p>By default, files you created will be accessible only to you. Before sharing it with others, you will need to specify the rights of the files to make it read-able to others. To do this (for an example file test_file.txt), use the example script as below:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="co"># Add read permission</span></a>
 <a class="sourceLine" id="cb4-2" data-line-number="2"><span class="fu">chmod</span> +r test_file.txt</a>
 <a class="sourceLine" id="cb4-3" data-line-number="3"><span class="co"># Add write permission</span></a>
