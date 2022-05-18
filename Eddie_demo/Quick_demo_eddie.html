@@ -625,6 +625,7 @@ body {
 
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="ex">qlogin</span> -l h_vmem=8G</a></code></pre></div>
 <p>You can specify how much memory is needed by specifying the ‘h_vmem’ option. The larger the dataset you work with and the more complex your analysis is, the larger momery is needed. It is difficult to know precisely how much memory is needed before running a script, even if you are very familiar with Eddie. It requires a bit of trail and error.</p>
+<p>To quit an interactive session, type ‘<strong>exit</strong>’ in the terminal</p>
 <ul>
 <li>Submit a code job to Eddie</li>
 </ul>
@@ -645,6 +646,17 @@ body {
 <a class="sourceLine" id="cb3-14" data-line-number="14"><span class="bu">echo</span> <span class="st">'You are a genius'</span> <span class="op">&gt;&gt;</span> test.txt</a></code></pre></div>
 <p>If you submit a code job to Eddie, the job will run without your immediate monitor. It will start running as long as a node that meets your requirements is available. This is particularly helpful if you require a large node for your job.</p>
 <p>The total memory required in the example script is 32G (per node) * 2 (number of nodes) = 64G</p>
+<ul>
+<li>Monitor a job submitted to Eddie</li>
+</ul>
+<!-- end list -->
+
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="ex">qstat</span></a></code></pre></div>
+<p>States: <strong>‘r’ = running; ‘qw’ = queue waiting</strong>; ‘hqw’ = hold queue waiting</p>
+<h2 id="other-references-about-eddie">Other references about Eddie</h2>
+<ul>
+<li>A complete guide for Eddie can be found <a href="https://www.wiki.ed.ac.uk/pages/viewpage.action?spaceKey=ResearchServices&amp;title=Eddie">here</a></li>
+</ul>
 <h2 id="working-directories-that-are-available-to-you">Working directories that are available to you</h2>
 <ul>
 <li>Group space (which you will create): /exports/igmm/eddie/GenScotDepression/<userfolder></li>
@@ -653,19 +665,25 @@ body {
 </ul>
 <h2 id="share-your-files-with-others">Share your files with others</h2>
 <p>By default, files you created will be accessible only to you. Before sharing it with others, you will need to specify the rights of the files to make it read-able to others. To do this (for an example file test_file.txt), use the example script as below:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="co"># Add read permission</span></a>
-<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="fu">chmod</span> +r test_file.txt</a>
-<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="co"># Add write permission</span></a>
-<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="fu">chmod</span> +w test_file.txt</a>
-<a class="sourceLine" id="cb4-5" data-line-number="5"><span class="co"># Add execute permission</span></a>
-<a class="sourceLine" id="cb4-6" data-line-number="6"><span class="fu">chmod</span> +x test_file.txt</a>
-<a class="sourceLine" id="cb4-7" data-line-number="7"></a>
-<a class="sourceLine" id="cb4-8" data-line-number="8"><span class="co"># Usually, if you'd like to share a file, it's useful to add both read and execute permission to the file</span></a>
-<a class="sourceLine" id="cb4-9" data-line-number="9"></a>
-<a class="sourceLine" id="cb4-10" data-line-number="10"><span class="fu">chmod</span> +rx test_file.txt</a></code></pre></div>
-<h2 id="other-references">Other references</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="co"># Add read permission</span></a>
+<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="fu">chmod</span> +r test_file.txt</a>
+<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="co"># Add write permission</span></a>
+<a class="sourceLine" id="cb5-4" data-line-number="4"><span class="fu">chmod</span> +w test_file.txt</a>
+<a class="sourceLine" id="cb5-5" data-line-number="5"><span class="co"># Add execute permission</span></a>
+<a class="sourceLine" id="cb5-6" data-line-number="6"><span class="fu">chmod</span> +x test_file.txt</a>
+<a class="sourceLine" id="cb5-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb5-8" data-line-number="8"><span class="co"># Usually, if you'd like to share a file, it's useful to add both read and execute permission to the file</span></a>
+<a class="sourceLine" id="cb5-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb5-10" data-line-number="10"><span class="fu">chmod</span> +rx test_file.txt</a></code></pre></div>
+<h2 id="use-r-on-eddie">Use R on Eddie</h2>
 <ul>
-<li>A complete guide for Eddie can be found <a href="https://www.wiki.ed.ac.uk/pages/viewpage.action?spaceKey=ResearchServices&amp;title=Eddie">here</a></li>
+<li><p>Load R into Eddie</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="ex">module</span> load igmm/apps/R/4.1.0</a></code></pre></div></li>
+<li><p>Open an R terminal</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="ex">R</span></a></code></pre></div></li>
+<li><p>Quit R</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="fu">quit()</span></a>
+<a class="sourceLine" id="cb8-2" data-line-number="2"><span class="co">#Save workspace image? [y/n/c]: n</span></a></code></pre></div></li>
 </ul>
 <h1 id="methylation-data-for-generation-scotland">Methylation data for Generation Scotland</h1>
 <h2 id="access-data-on-eddie">Access data on Eddie</h2>
@@ -681,9 +699,9 @@ body {
 </ul>
 <h3 id="access-data-in-datastore-(this-is-where-most-of-the-data-is-safely-stored)">Access data in datastore (this is where most of the data is safely stored)</h3>
 <p>You’ll need to log on a ‘staging node’ to access datastore, in a way that is similar with logging on an interactive node. Use the script below:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="ex">qlogin</span> -q staging</a>
-<a class="sourceLine" id="cb5-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="bu">cd</span> /exports/igmm/datastore/GenScotDepression/data</a></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="ex">qlogin</span> -q staging</a>
+<a class="sourceLine" id="cb9-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb9-3" data-line-number="3"><span class="bu">cd</span> /exports/igmm/datastore/GenScotDepression/data</a></code></pre></div>
 <p>Usually, after finding the data you need, you’ll copy the data over to your scratch space for further analysis.</p>
 
 </body>

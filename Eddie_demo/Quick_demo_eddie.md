@@ -20,12 +20,12 @@ library(knitr)
   - Download and set up
     [MobaXterm](https://mobaxterm.mobatek.net/download.html)
 
-<img src="screenshots/eddie_demo/Slide1.PNG" width="1280" />
+<img src="/gpfs/igmmfs01/eddie/GenScotDepression/shen/ActiveProject/CodingClubPsych/Eddie_demo/screenshots/eddie_demo/Slide1.PNG" width="1280" />
 
   - Download and set up
     [WinSCP](https://winscp.en.softonic.com/download?utm_source=SEM&utm_medium=paid&utm_campaign=EN_desktop_UK_conversions_DSA&gclid=Cj0KCQjwspKUBhCvARIsAB2IYus2vr4tG52r090sgZ7XlNQh5FuFbxa5p9kuW9GoFBL3iyIYzs5oXUgaAhP2EALw_wcB)
 
-<img src="screenshots/eddie_demo/Slide2.PNG" width="1280" />
+<img src="/gpfs/igmmfs01/eddie/GenScotDepression/shen/ActiveProject/CodingClubPsych/Eddie_demo/screenshots/eddie_demo/Slide2.PNG" width="1280" />
 
 ## Two ways of using Eddie
 
@@ -42,6 +42,8 @@ option. The larger the dataset you work with and the more complex your
 analysis is, the larger momery is needed. It is difficult to know
 precisely how much memory is needed before running a script, even if you
 are very familiar with Eddie. It requires a bit of trail and error.
+
+To quit an interactive session, type ‘**exit**’ in the terminal
 
   - Submit a code job to Eddie
 
@@ -75,6 +77,22 @@ require a large node for your job.
 The total memory required in the example script is 32G (per node) \* 2
 (number of nodes) = 64G
 
+  - Monitor a job submitted to Eddie
+
+<!-- end list -->
+
+``` bash
+qstat
+```
+
+States: **‘r’ = running; ‘qw’ = queue waiting**; ‘hqw’ = hold queue
+waiting
+
+## Other references about Eddie
+
+  - A complete guide for Eddie can be found
+    [here](https://www.wiki.ed.ac.uk/pages/viewpage.action?spaceKey=ResearchServices&title=Eddie)
+
 ## Working directories that are available to you
 
   - Group space (which you will create):
@@ -102,10 +120,26 @@ chmod +x test_file.txt
 chmod +rx test_file.txt
 ```
 
-## Other references
+## Use R on Eddie
 
-  - A complete guide for Eddie can be found
-    [here](https://www.wiki.ed.ac.uk/pages/viewpage.action?spaceKey=ResearchServices&title=Eddie)
+  - Load R into Eddie
+    
+    ``` bash
+    module load igmm/apps/R/4.1.0
+    ```
+
+  - Open an R terminal
+    
+    ``` bash
+    R
+    ```
+
+  - Quit R
+    
+    ``` bash
+    quit()
+    #Save workspace image? [y/n/c]: n
+    ```
 
 # Methylation data for Generation Scotland
 

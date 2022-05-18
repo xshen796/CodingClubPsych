@@ -40,6 +40,8 @@ qlogin -l h_vmem=8G
 
 You can specify how much memory is needed by specifying the 'h_vmem' option. The larger the dataset you work with and the more complex your analysis is, the larger momery is needed. It is difficult to know precisely how much memory is needed before running a script, even if you are very familiar with Eddie. It requires a bit of trail and error.
 
+To quit an interactive session, type '**exit**' in the terminal
+
 -   Submit a code job to Eddie
 
 Find an example script [here](https://github.com/xshen796/CodingClubPsych/blob/master/Eddie_demo/Eddie_job) or copy and paste the script below in an empty plain text file you created:
@@ -65,6 +67,18 @@ If you submit a code job to Eddie, the job will run without your immediate monit
 
 The total memory required in the example script is 32G (per node) \* 2 (number of nodes) = 64G
 
+-   Monitor a job submitted to Eddie
+
+```{bash,eval=F}
+qstat
+```
+
+States: **'r' = running; 'qw' = queue waiting**; 'hqw' = hold queue waiting
+
+## Other references about Eddie
+
+-   A complete guide for Eddie can be found [here](https://www.wiki.ed.ac.uk/pages/viewpage.action?spaceKey=ResearchServices&title=Eddie)
+
 ## Working directories that are available to you
 
 -   Group space (which you will create): /exports/igmm/eddie/GenScotDepression/<userfolder>
@@ -88,9 +102,26 @@ chmod +x test_file.txt
 chmod +rx test_file.txt
 ```
 
-## Other references
+## Use R on Eddie
 
--   A complete guide for Eddie can be found [here](https://www.wiki.ed.ac.uk/pages/viewpage.action?spaceKey=ResearchServices&title=Eddie)
+-   Load R into Eddie
+
+    ```{bash,eval=F}
+    module load igmm/apps/R/4.1.0
+    ```
+
+-   Open an R terminal
+
+    ```{bash,eval=F}
+    R
+    ```
+
+-   Quit R
+
+    ```{bash,eval=F}
+    quit()
+    #Save workspace image? [y/n/c]: n
+    ```
 
 # Methylation data for Generation Scotland
 
