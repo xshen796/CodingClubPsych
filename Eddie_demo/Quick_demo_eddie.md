@@ -20,7 +20,7 @@ library(knitr)
   - Download and set up
     [MobaXterm](https://mobaxterm.mobatek.net/download.html)
 
-<img src="eddie_demo/Slide1.PNG" width="1280" />
+<img src="screenshots/eddie_demo/Slide1.PNG" width="1280" />
 
   - Download and set up
     [WinSCP](https://winscp.en.softonic.com/download?utm_source=SEM&utm_medium=paid&utm_campaign=EN_desktop_UK_conversions_DSA&gclid=Cj0KCQjwspKUBhCvARIsAB2IYus2vr4tG52r090sgZ7XlNQh5FuFbxa5p9kuW9GoFBL3iyIYzs5oXUgaAhP2EALw_wcB)
