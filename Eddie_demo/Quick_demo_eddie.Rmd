@@ -14,17 +14,17 @@ library(knitr)
 
 ## Local set up
 
--  [Register](https://www.ed.ac.uk/information-services/computing/desktop-personal/vpn/vpn-service-registration) your VPN service
+-   [Register](https://www.ed.ac.uk/information-services/computing/desktop-personal/vpn/vpn-service-registration) your VPN service
 
--  Connect to VPN using [FortiClinet](https://www.ed.ac.uk/information-services/computing/desktop-personal/vpn/forticlient-vpn)
+-   Connect to VPN using [FortiClinet](https://www.ed.ac.uk/information-services/computing/desktop-personal/vpn/forticlient-vpn)
 
--  Download and set up [MobaXterm](https://mobaxterm.mobatek.net/download.html)
+-   Download and set up [MobaXterm](https://mobaxterm.mobatek.net/download.html)
 
 ```{r,echo=F,fig.height=6,fig.width=12}
 knitr::include_graphics(here::here("Eddie_demo/screenshots/eddie_demo/Slide1.PNG"))
 ```
 
--  Download and set up [WinSCP](https://winscp.en.softonic.com/download?utm_source=SEM&utm_medium=paid&utm_campaign=EN_desktop_UK_conversions_DSA&gclid=Cj0KCQjwspKUBhCvARIsAB2IYus2vr4tG52r090sgZ7XlNQh5FuFbxa5p9kuW9GoFBL3iyIYzs5oXUgaAhP2EALw_wcB)
+-   Download and set up [WinSCP](https://winscp.en.softonic.com/download?utm_source=SEM&utm_medium=paid&utm_campaign=EN_desktop_UK_conversions_DSA&gclid=Cj0KCQjwspKUBhCvARIsAB2IYus2vr4tG52r090sgZ7XlNQh5FuFbxa5p9kuW9GoFBL3iyIYzs5oXUgaAhP2EALw_wcB)
 
 ```{r,echo=F,fig.height=6,fig.width=12}
 knitr::include_graphics(here::here("Eddie_demo/screenshots/eddie_demo/Slide2.PNG"))
@@ -32,8 +32,7 @@ knitr::include_graphics(here::here("Eddie_demo/screenshots/eddie_demo/Slide2.PNG
 
 ## Two ways of using Eddie
 
--  Log on an interactive node
-
+-   Log on an interactive node
 
 ```{bash, eval=F}
 qlogin -l h_vmem=8G
@@ -41,7 +40,7 @@ qlogin -l h_vmem=8G
 
 You can specify how much memory is needed by specifying the 'h_vmem' option. The larger the dataset you work with and the more complex your analysis is, the larger momery is needed. It is difficult to know precisely how much memory is needed before running a script, even if you are very familiar with Eddie. It requires a bit of trail and error.
 
--  Submit a code job to Eddie
+-   Submit a code job to Eddie
 
 Find an example script [here](https://github.com/xshen796/CodingClubPsych/blob/master/Eddie_demo/Eddie_job) or copy and paste the script below in an empty plain text file you created:
 
@@ -64,13 +63,13 @@ echo 'You are a genius' >> test.txt
 
 If you submit a code job to Eddie, the job will run without your immediate monitor. It will start running as long as a node that meets your requirements is available. This is particularly helpful if you require a large node for your job.
 
-The total memory required in the example script is 32G (per node) * 2 (number of nodes) = 64G
+The total memory required in the example script is 32G (per node) \* 2 (number of nodes) = 64G
 
 ## Working directories that are available to you
 
--  Group space (which you will create): /exports/igmm/eddie/GenScotDepression/<userfolder>
--  Home space: /home/<UII>
--  Personal scratch space: /exports/eddie/scratch/<UII>
+-   Group space (which you will create): /exports/igmm/eddie/GenScotDepression/<userfolder>
+-   Home space: /home/<UII>
+-   Personal scratch space: /exports/eddie/scratch/<UII>
 
 ## Share your files with others
 
@@ -91,9 +90,9 @@ chmod +rx test_file.txt
 
 ## Other references
 
--  A complete guide for Eddie can be found [here](https://www.wiki.ed.ac.uk/pages/viewpage.action?spaceKey=ResearchServices&title=Eddie)
+-   A complete guide for Eddie can be found [here](https://www.wiki.ed.ac.uk/pages/viewpage.action?spaceKey=ResearchServices&title=Eddie)
 
-# Methylation data in for Generation Scotland
+# Methylation data for Generation Scotland
 
 ## Access data on Eddie
 
@@ -105,13 +104,13 @@ In this folder, subfolders contain methylation data (methylation), phenotypes (p
 
 Specific files:
 
--  DNA methylation data: M-values by chromosome: methylation/methylation_by_carmen/mvalues_epic/mvalues_epic_chroms/
+-   DNA methylation data: M-values by chromosome: methylation/methylation_by_carmen/mvalues_epic/mvalues_epic_chroms/
 
--  BMI and MDD phenotypes: phenotypes/masterDB.Rdata
+-   BMI and MDD phenotypes: phenotypes/masterDB.Rdata
 
--  Data dictionary for **masterDB.Rdata**: phenotypes/phenotypes.csv
+-   Data dictionary for **masterDB.Rdata**: phenotypes/phenotypes.csv
 
--  Genotypes: genetics/imputed/HRC/updated_bims
+-   Genotypes: genetics/imputed/HRC/updated_bims
 
 ### Access data in datastore (this is where most of the data is safely stored)
 
@@ -122,6 +121,5 @@ qlogin -q staging
 
 cd /exports/igmm/datastore/GenScotDepression/data
 ```
-
 
 Usually, after finding the data you need, you'll copy the data over to your scratch space for further analysis.
