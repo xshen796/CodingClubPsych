@@ -76,12 +76,14 @@ X Shen
   - The folder containing the files resulting from the above steps (ukb_50k_bigset_2.8M, 255 GB) can be found in:
      /exports/igmm/datastore/GenScotDepression/data/resources/SBayesR_matrices
      
-     or
+     Copy the folder `ukb_50k_bigset_2.8M/` to your scratch space (it is a big file though) and run SBayesR from the folder you have copied into, ie. the root because the paths in `ukb_50k_bigset_2.8M/ukb50k_2.8M_shrunk_sparse.new.mldmlist` will search for `ukb_50k_bigset_2.8M/ukb50k_shrunk_chr${i}_mafpt01.ldm.sparse`.
      
-     cp -r /exports/eddie/scratch/kmarwick/ukb_50k_bigset_2.8M /exports/igmm/eddie/GenScotDepression/data/resources/SBayesR_matrices
-    
+     And make sure you are using `ukb50k_2.8M_shrunk_sparse.new.mldmlist` not `ukb50k_2.8M_shrunk_sparse.mldmlist`.
+     
     > Prepared input 2:
     > ukb\_50k\_bigset\_2.8M/ukb50k\_2.8M\_shrunk\_sparse.new.mldmlist
+    
+  
 
 -----
 
